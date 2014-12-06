@@ -1,16 +1,16 @@
 
-public class Card {
-	private int suit;
-	private int pip;
-	
-	public Card(int Suit, int Pip){
-		suit = Suit;
-		pip = Pip;
+public class Tonk {
+
+	public static void main(String[] args) {
+		
+		Card deck = new Card();
+		String random = deck.randomCard();
+		int valueOfRandom = deck.getValue(random);
+		System.out.println(random);
+		System.out.println(valueOfRandom);
+		
+		
+
 	}
-	
-	public int[] returnCard(){
-		int[] array = {suit, pip};
-		return array;
-	}
-	
+
 }
