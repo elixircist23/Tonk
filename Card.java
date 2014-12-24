@@ -3,12 +3,15 @@ import java.util.*;
 import java.util.Arrays;
 
 public class Card {
-	
-	//Creating HashMap with String Keys and Integer Values
-	public HashMap<String,Integer> deck = new HashMap<String, Integer>();
-	public ArrayList<String> USED = new ArrayList<String>();
+	public HashMap<String, Integer> deck;
+	public static ArrayList<String> USED;
 	
 	public Card(){
+		
+		//Creating HashMap with String Keys and Integer Values
+		deck = new HashMap<String, Integer>();
+		//Creating Array list for used cards, we'll add to this list later on
+		USED = new ArrayList<String>();
 		
 		//Creating all the cards and placing them in the HashMap called 'deck'
 		for(int i = 2; i < 10; i++){
@@ -47,11 +50,6 @@ public class Card {
 		deck.put("Jack of Clubs", 10);
 		deck.put("Jack of Diamonds", 10);
 		
-		
-	}
-	
-	public void print(){
-		System.out.println(deck);
 	}
 	
 	public String randomCard(){
@@ -61,7 +59,7 @@ public class Card {
 		Random random = new Random();
 		List<String> keys = new ArrayList<String>(deck.keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
-		Integer value = deck.get(randomKey);
+		//Integer value = deck.get(randomKey);
 		
 		return randomKey;
 		
@@ -69,6 +67,7 @@ public class Card {
 	
 	public int getValue(String key){
 		//returns the value of the card, given the key
+		//useful for adding values of cards together
 		int value = deck.get(key);
 		return value;
 	}
@@ -92,16 +91,11 @@ public class Card {
 				dealCards[x] = randomCard;
 				x++;
 			}
-			
+			//CHANGE THIS LATER, if there are no cards what to do?
 		
 		}
 		
 		return dealCards;
 	}
-	
-	
-	
-	
-	
 	
 }
