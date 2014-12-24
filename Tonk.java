@@ -4,24 +4,11 @@ public class Tonk {
 	public static void main(String[] args) {
 		
 		
-		Card deck = new Card();
-		String[] test;
-		test = deck.deal();
-		System.out.println(Arrays.toString(test));
+		Card card = new Card();
+		card.deal();
+		Player player = new Player();
 		
 		
-		
-		
-		
-		
-		/*
-		int valueOfRandom = deck.getValue(random);
-		System.out.println(valueOfRandom);
-		*/
-		
-		
-		
-
 	}
 
 }
