@@ -15,27 +15,33 @@ public class Player {
 	
 	public void draw(){
 		String randomCard = card.randomCard();
-		System.out.println(randomCard);
-		int x = 1;
-		while(x > 0){
-			if(deck.isEmpty() == false){
+		if(deck.size() > 0){
+			while(true){
+			
 				if(USED.contains(randomCard)){
 					continue;
 				}
+			
 				else{
-					hand.add(card.randomCard());
-					x++;
+					System.out.println(randomCard);
+					deck.remove(randomCard);
+					USED.add(randomCard);
+					hand.add(randomCard);
+					break;
 				}
 			}
-			else{
-				System.out.println("GSO");
-				x++;
-			}
+		}
+		
+		else{
+			System.out.println("GSO");
 		}
 	}
 	
 	public void print(){
 		System.out.println(hand);
+		System.out.println(hand.size());
+		System.out.println("deck = " + deck.size());
+		System.out.println(USED.size());
 	}
 	
 	
