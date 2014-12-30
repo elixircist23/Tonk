@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Card {
 	public HashMap<String, Integer> deck;
 	public static ArrayList<String> USED;
+	public static ArrayList<String> dealCards;
 	
 	public Card(){
 		
@@ -72,10 +73,9 @@ public class Card {
 		return value;
 	}
 	
-	public String[] deal(){
+	public ArrayList<String> deal(){
 		//Returns 5 cards that are not being used in the deck
-		String dealCards[];
-		dealCards = new String[5];
+		dealCards = new ArrayList<String>();
 		int x = 0;
 		
 		while(x<5){
@@ -88,7 +88,7 @@ public class Card {
 			else{
 				//add random card to USED pile
 				USED.add(randomCard);
-				dealCards[x] = randomCard;
+				dealCards.add(randomCard);
 				x++;
 			}
 			//CHANGE THIS LATER, if there are no cards what to do?
