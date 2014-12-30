@@ -15,19 +15,19 @@ public class Card {
 		USED = new ArrayList<String>();
 		
 		//Creating all the cards and placing them in the HashMap called 'deck'
-		for(int i = 2; i < 10; i++){
+		for(int i = 2; i < 11; i++){
 			deck.put(i + " of Hearts", i);
 		}
 		
-		for(int i = 2; i < 10; i++){
+		for(int i = 2; i < 11; i++){
 			deck.put(i + " of Spades", i);
 		}
 		
-		for(int i = 2; i < 10; i++){
+		for(int i = 2; i < 11; i++){
 			deck.put(i + " of Clubs", i);
 		}
 		
-		for(int i = 2; i < 10; i++){
+		for(int i = 2; i < 11; i++){
 			deck.put(i + " of Diamonds", i);
 		}
 		
@@ -55,14 +55,19 @@ public class Card {
 	
 	public String randomCard(){
 		
+		if(deck.size()>0){
 		//Selects a random card from deck
 		//Gets value and Key, but returns a String of the Key
 		Random random = new Random();
 		List<String> keys = new ArrayList<String>(deck.keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		//Integer value = deck.get(randomKey);
-		
 		return randomKey;
+		}
+		
+		else{
+			return null;
+		}
 		
 	}
 	
