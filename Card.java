@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.Arrays;
 
 public class Card {
-	public HashMap<String, Integer> deck;
+	public static HashMap<String, Integer> deck;
 	public static ArrayList<String> USED;
 	public static ArrayList<String> dealCards;
 	
@@ -87,6 +87,7 @@ public class Card {
 			
 			else{
 				//add random card to USED pile
+				deck.remove(randomCard);
 				USED.add(randomCard);
 				dealCards.add(randomCard);
 				x++;
