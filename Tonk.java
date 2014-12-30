@@ -5,7 +5,64 @@ public class Tonk {
 		
 		
 		Player player = new Player();
+		
 		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		player.draw();
+		
+		
+		
+		
+		
+		
+		
+		
+		player.print();
+	
 		
 		
 	}
