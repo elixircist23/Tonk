@@ -56,13 +56,13 @@ public class Card {
 	public String randomCard(){
 		
 		if(deck.size()>0){
-		//Selects a random card from deck
-		//Gets value and Key, but returns a String of the Key
-		Random random = new Random();
-		List<String> keys = new ArrayList<String>(deck.keySet());
-		String randomKey = keys.get(random.nextInt(keys.size()));
-		//Integer value = deck.get(randomKey);
-		return randomKey;
+			//Selects a random card from deck
+			//Gets value and Key, but returns a String of the Key
+			Random random = new Random();
+			List<String> keys = new ArrayList<String>(deck.keySet());
+			String randomKey = keys.get(random.nextInt(keys.size()));
+			//Integer value = deck.get(randomKey);
+			return randomKey;
 		}
 		
 		else{
